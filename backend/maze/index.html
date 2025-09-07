@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Combat</title>
+
+    <style>
+        #maze {
+          display: grid;
+          grid-template-columns: repeat(96, 8px);
+          grid-template-rows: repeat(96, 8px);
+          width: 768px;      /* lock exact width */
+          height: 768px;     /* lock exact height */
+          box-sizing: content-box;
+          border: 8px solid black;
+        }
+
+        .mazeSpot {
+          width: 8px;
+          height: 8px;
+          background: black; /* walls by default */
+        }
+
+        .path {
+          background: white;
+        }
+
+        .start {
+          background: green !important;
+        }
+
+        .end {
+          background: red !important;
+        }
+
+        .player {
+          width: 100%;
+          height: 100%;
+          background: blue;
+          transition: all 0.15s linear;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="game"></canvas>
+    <script src="maze.js"></script>
+    <button onclick="generateMaze()">Generate Maze</button>
+    <br>
+    <br>
+    <div id="maze"></div>
+</body>
+</html>
