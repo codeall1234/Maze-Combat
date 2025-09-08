@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "start": "webpack-dev-server --port 6767"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,15 @@
   "bugs": {
     "url": "https://github.com/codeall1234/Maze-Combat/issues"
   },
-  "homepage": "https://github.com/codeall1234/Maze-Combat#readme"
+  "homepage": "https://github.com/codeall1234/Maze-Combat#readme",
+  "devDependencies": {
+    "@babylonjs/core": "^8.26.0",
+    "@babylonjs/inspector": "^8.26.0",
+    "html-webpack-plugin": "^5.6.4",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.2",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
 }
